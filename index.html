@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="wrapper" ng-app="toggleViewApp" ng-controller="toggleViewController">
+      <div class="main panel">
+        <button class="btn btn-primary" on-action="'CLICK, [panel1, panel2, panel3], [true, false, false]'" scope-obj="isVisible">View Panel 1</button>
+        <button class="btn btn-primary" on-action="'CLICK, [panel1, panel2, panel3], [false, true, false]'" scope-obj="isVisible">View Panel 2</button>
+        <button class="btn btn-primary" on-action="'CLICK, [panel1, panel2, panel3], [false, false, true]'" scope-obj="isVisible">View Panel 3</button>
+      </div>
+      <div class="panel panel1" ng-show="isVisible.panel1">
+        <button class="btn btn-primary" on-action="'CLICK, [panel11, panel12, panel13], [true, false, false]'" scope-obj="isVisible">View Panel 11</button>
+        <button class="btn btn-primary" on-action="'CLICK, [panel11, panel12, panel13], [false, true, false]'" scope-obj="isVisible">View Panel 12</button>
+        <button class="btn btn-primary" on-action="'CLICK, [panel11, panel12, panel13], [false, false, true]'" scope-obj="isVisible">View Panel 13</button>
+        
+        <div class="panel panel11" ng-show="isVisible.panel11">Panel 11</div>
+        <div class="panel panel12" ng-show="isVisible.panel12">Panel 12</div>
+        <div class="panel panel13" ng-show="isVisible.panel13">Panel 13</div>
+      </div>
+      <div class="panel panel2" ng-show="isVisible.panel2">
+        panel 2
+      </div>
+      <div class="panel panel3" ng-show="isVisible.panel3">
+        panel 3
+      </div>
+    </div>
+  </body>
+
+</html>
