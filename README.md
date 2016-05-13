@@ -1,5 +1,7 @@
 # onActionDirectiveAngular
-onAction directives to set visibility of multiple panels
+onAction directives to set visibility of multiple panels.
+
+Another way of implementing routing for small components.
 
 > scope-obj="isVisible"
 
@@ -24,4 +26,5 @@ on-action="'CLICK, [days, select], [false, false]'"
 *eg. Setting multiple events and attribute at the same*
 
 on-action="'[CLICK, KEYUP], [days, select], [false, false]'"
+
 In this case, when any of the event is triggered, the attribute values are modified.
